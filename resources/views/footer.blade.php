@@ -9,8 +9,16 @@
 </head>
 <body>
 <h1 class="h2">筋トレ</h1>
-<form method="GET" action="/">
-<button type="submit" value="送信" class="botton">ログアウト</button>
+<form method="GET" action="/access">
+<button type="submit" value="送信"  class="">アクセスにいく</button>
 </form>
+<form method="GET" action="/test">
+<button type="submit" value="送信"  class="">テストにいく</button>
+</form>
+<form method="GET" action="/">
+<button type="submit" value="送信"  class="logout">ログアウト</button>
+</form>
+<script src="jquery-3.6.3.js"></script>
+<script type="text/javascript"src="script.js"></script>
 </body>
 </html>

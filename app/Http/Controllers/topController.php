@@ -10,7 +10,6 @@ class topController extends Controller
 
     public function massege(Request $request)
     {
-        session()->flush();
         session()->forget('login');
         // $aaaaaa='あああ';
         // session(['login' => $aaaaaa]);
@@ -30,10 +29,8 @@ class topController extends Controller
             $kintore->save();//データーベースに追加している
         }
         session(['name'=>$requestdate]);
-        session(['login'=>'1']);
-        return view('test',compact('requestdate'));
-        // ['deta' => $request,'user'=>$user]
-        // ['youss'=>$yous,'deta'=>$request,'user'=>$user]
+        session(['login'=>1]);
+        return view('test',['requestdate'=>$requestdate]);
     }
 }
 //詰まったこと

@@ -8,14 +8,12 @@
 </head>
 <body>
     @include('head')
-    {{ session('accesss')}}
+    {{ session('login')}}
 </br>
 
 {{ $dbs }}
 <?php echo session('login');$aaa=session('login');echo $aaa;?>
 <h3>これ</h3>
 @include('footer')
-<script src="jquery-3.6.3.js"></script>
-<script type="text/javascript"src="script.js"></script>
 </body>
 </html>

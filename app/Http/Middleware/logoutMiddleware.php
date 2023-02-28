@@ -14,10 +14,11 @@ class logoutMiddleware {
      */
     public function handle(Request $request, Closure $next): Response
     {
-    $gate=session()->get('login');
-    if($gate=='1'){response('top');}
+        $gate=session()->get('login');
+        if(!$gate==1){return response('top');}
     return $next($request);
 
+    // dd($gate);
 
 
 

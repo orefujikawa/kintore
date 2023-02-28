@@ -16,11 +16,12 @@
 <body>
     @include('head')
 <p1>ようこそ<?php echo session('name');?></p1>
+{{ session('login')}}
     <p>テスト</p>
     ここ
     <p>{{ isset($urls)}}{{ isset($sessiontest) }}</p>
     <li>ああ</li>
-    <li>これはid{{ $requestdate}}あ</li>
+    <li>これはid{{ isset($requestdate)}}あ</li>
     <?php echo session('login');$aaa=session('login');echo 'これはつながり';echo $aaa;?>
     これはミドル{{ true }}です
     <form method="GET" action="kintoremain">

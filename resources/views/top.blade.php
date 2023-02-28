@@ -9,7 +9,6 @@
 </head>
 <body>
     @include('head')
-    {{ session('tops')}}{{ session('re')}}
     <div class="grid">
     <div class="grid1">
     <p>アカウント新規作成</p></br>
@@ -19,10 +18,10 @@
         @csrf
     <P>あなたのユーザー名を入力してください</P>
     <P>英文字</P>
-    <input type="text" maxlength="6"minlength="6"name="idname"placeholder="ユーザー名"></br>
-    <input type="email"maxlength="25"minlength="10"name="email"placeholder="メールアドレス"></br>
+    <input type="text" value="111111" maxlength="6"minlength="6"name="idname"placeholder="ユーザー名"></br>
+    <input type="email"value="aaaa@gmai.com" maxlength="25"minlength="10"name="email"placeholder="メールアドレス"></br>
     <p1>入力された数字とそのあとに表示されている数字がパスワードです</p1></br>
-    <input type="password" maxlength="9"minlength="7" class="ruletext"name="pass"placeholder="パスワード">
+    <input type="password" value="111111111" maxlength="9"minlength="7" class="ruletext"name="pass"placeholder="パスワード">
     <?php echo($a=random_int(000,999));echo ($a);?></br>
     <button type="submit" value="送信" class="bottons"></button>
     </form>
@@ -47,8 +46,6 @@
     </div>
     これはミドル{{ isset($aa) }}です
     @include('footer')
-    <script src="jquery-3.6.3.js"></script>
-<script type="text/javascript"src="script.js"></script>
 
 </body>
 </html>

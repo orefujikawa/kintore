@@ -13,6 +13,7 @@ class loginout extends Controller
         // $pass=$request->only('pass');//これは何しているのか
         $dbs=Kintore::where([['idname','=',$request->idname],['pass','=',$request->pass]])->first();//idname passに一致するテーブルを拾ってくる
         //↑入力フォームの値を受け取ってふるいにかけている（ログインきこう）
+        session(['login'=>1]);
          if(isset($dbs)){
         return view('access',['dbs'=>$dbs]);
     }else{return redirect('top');}
