@@ -1,0 +1,5 @@
+.grid{display: grid;grid-template-columns:2;}
+.grid1{text-align: center;grid-column: 1;}
+.grid2{text-align: center;grid-column: 2;}
+.botton{float:right;
+font-size: 20px;}
