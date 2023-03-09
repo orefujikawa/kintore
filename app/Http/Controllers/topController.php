@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\kintore;
-
 class topController extends Controller
 {
 
     public function massege(Request $request)
     {
         session()->forget('login');
+
         // $aaaaaa='あああ';
         // session(['login' => $aaaaaa]);
         $validaterule=$this->validate($request,[
@@ -28,10 +28,16 @@ class topController extends Controller
 
             $kintore->save();//データーベースに追加している
         }
+
+        if(isset($requestdate)){
         session(['name'=>$requestdate]);
         session(['login'=>1]);
-        return view('test',['requestdate'=>$requestdate]);
-    }
+
+        return view('/mypage',['requestdate'=>$requestdate]);
+    }return view('/mypage');
+}
+
+
 }
 //詰まったこと
 //値渡しview('test',compact('kya'));この方法の他に連想配列view('test',['deta' => $request,'user'=>$user]

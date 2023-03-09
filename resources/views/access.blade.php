@@ -14,6 +14,10 @@
 {{ $dbs }}
 <?php echo session('login');$aaa=session('login');echo $aaa;?>
 <h3>これ</h3>
-@include('footer')
+<form method="POST" action="/kintoremain">
+    @csrf
+    <button type="submit" value="送信"  class="kintore">筋トレ</button>
+</form>
+    @include('footer')
 </body>
 </html>

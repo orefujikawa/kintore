@@ -9,13 +9,16 @@
 </head>
 <body>
 <h1 class="h2">筋トレ</h1>
-<form method="GET" action="/access">
+{{-- <form method="POST" action="{{ route('access') }}">
+    @csrf
 <button type="submit" value="送信"  class="">アクセスにいく</button>
+</form> --}}
+{{-- <form method="POST" action="{{ route('test') }}">
+    @csrf
+<button type="submit" value="送信"  class="">テストにいく</button> --}}
 </form>
-<form method="GET" action="/test">
-<button type="submit" value="送信"  class="">テストにいく</button>
-</form>
-<form method="GET" action="/">
+<form method="GET" action="{{ route('top') }}">
+    @csrf
 <button type="submit" value="送信"  class="logout">ログアウト</button>
 </form>
 <script src="jquery-3.6.3.js"></script>

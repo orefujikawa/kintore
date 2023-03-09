@@ -14,7 +14,7 @@
     <p>アカウント新規作成</p></br>
 
 
-    <form method="GET" action="test">
+    <form method="POST" action="mypage">
         @csrf
     <P>あなたのユーザー名を入力してください</P>
     <P>英文字</P>
@@ -27,10 +27,9 @@
     </form>
     </div>
 
-
     <div class="grid2">
         <p>ログイン</p></br>
-        <form method="GET" action="access">
+        <form method="POST" action="access">
             @csrf
         <P>あなたのユーザー名を入力してください</P>
         <P>英文字</P>

@@ -15,7 +15,8 @@ class loginout extends Controller
         //↑入力フォームの値を受け取ってふるいにかけている（ログインきこう）
         session(['login'=>1]);
          if(isset($dbs)){
-        return view('access',['dbs'=>$dbs]);
+            $idname=$request->idname;
+        return view('access',['dbs'=>$idname]);
     }else{return redirect('top');}
     }
     }

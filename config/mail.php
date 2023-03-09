@@ -36,16 +36,13 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'watasifujikawa@gmail.com'),
+            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT',587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('watasifujikawa@gmail.com'),
-            'password' => env('gddqpsenhnwbigrd'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
-            'local_domain' => env('localhost'),
-            'verify_peer' => false,
-            'pretend' => false,
-        ],
+            'local_domain' => env('MAIL_LOCAL_DOMAIN'),],
 
         'ses' => [
             'transport' => 'ses',
@@ -121,6 +118,4 @@ return [
         'paths' => [
             resource_path('views/vendor/mail'),
         ],
-    ],
-
-];
+    ],];

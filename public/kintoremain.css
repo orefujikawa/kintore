@@ -1,0 +1,17 @@
+.kiroku{display: grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows: 100px 100px;
+width:fit-content;margin: auto;
+width: auto;height: 350px;
+text-align: center;}
+.kyou{grid-column:1/2;}
+.kinou{grid-column:2/2;}
+.kiro{grid-row:1/2;}
+
+.position1{margin-left: auto;display: grid;grid-template-columns:1fr 220px;
+    grid-template-rows: 100px;}
+.touroku{height:100px;width:120px;
+grid-column: 2/2;grid-row: 1/1;}
+.botton{height:100px;width:100px;margin-left: auto;
+    grid-column: 2/2;grid-row: 1/1;}
+label{font-size: 15px;}
